@@ -47,7 +47,7 @@ class App extends Component {
     return (
       //js 안에 자리잡고 있는 html을 jsx 라고 함
       //jsx 는 리액트 컴포넌트를 만들때 사용하는 언어
-      <div className="App">
+      <div className={this.state.movies ? "App" : "App--loading"}>
         {this.state.greeting}
         {
           this.state.movies ? this._renderMoive() : "Loadig ..."
